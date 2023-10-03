@@ -51,6 +51,7 @@
         </dependency>
     </dependencies>
     <build>
+
         <plugins>
             <plugin>
                 <groupId>org.jooq</groupId>
@@ -87,8 +88,7 @@
                     <inputSchema>public</inputSchema>
                 </database>
                 <target>
-                    <packageName>com.minibank/packageName></packageName>
-                    <directory>target/generated-sources/jooq</directory>
+                    <packageName>com.minibank.database</packageName>
                 </target>
             </generator>
         </configuration>
