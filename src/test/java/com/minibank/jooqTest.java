@@ -65,4 +65,14 @@ public class jooqTest {
 
     }
 
+    @Test
+    @Order(4)
+    void update(){
+        int updateRows = dsl
+                .update(CITIES)
+                .set(CITIES.NAME, "Ivan-ovo")
+                .where(CITIES.ID.eq(1L))
+                .execute();
+    }
+
 }
