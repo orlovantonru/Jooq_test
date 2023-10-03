@@ -1,3 +1,5 @@
+package com.minibank;
+
 import com.minibank.database.tables.records.CitiesRecord;
 import com.minibank.database.tables.records.CountriesRecord;
 
@@ -11,10 +13,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static com.minibank.database.tables.Cities;
-import static com.minibank.database.tables.Countries.;
+import static com.minibank.database.tables.Cities.CITIES;
+import static com.minibank.database.tables.Countries.COUNTRIES;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @JooqTest
 public class jooqTest {
 }
+
