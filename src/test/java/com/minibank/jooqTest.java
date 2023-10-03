@@ -31,5 +31,14 @@ public class jooqTest {
 
         assertThat(competitions).hasSize(3);
     }
+
+    @Test
+    void find_join(){
+        List<CountryCityDTO> athletes = dsl
+                .select(COUNTRIES.NAME, COUNTRIES.POPULATION, CITIES.NAME )
+                .from(COUNTRIES)
+                .join(CITIES).on(CITIES.COUNTRY_ID.eq(COUNTRIES.ID))
+                .fetchInto(CountryCityDTO.class);
+    }
 }
 
