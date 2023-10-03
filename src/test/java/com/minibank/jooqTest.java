@@ -19,5 +19,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @JooqTest
 public class jooqTest {
+
+    @Autowired
+    private DSLContext dsl;
+
+    @Test
+    void find_Countries() {
+        Result<CountriesRecord> competitions = dsl
+                .selectFrom(COUNTRIES)
+                .fetch();
+
+        assertThat(competitions).hasSize(3);
+    }
 }
 
